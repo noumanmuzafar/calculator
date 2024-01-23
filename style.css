@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100%;
+  width: 100%;
+  display: flex; /* write line no 12,13,14 in the body to make the shadow effects of calculator possible */
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    45deg,
+    #0a0a0a,
+    #3a4452
+  ); /* linear-gradient doesn't work on "background-color" property*/
+}
+
+.calculator {
+  padding: 20px;
+  margin: 40px 0;
+  border-radius: 16px;
+  box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.5), -1px -3px 15px rgba(0, 0, 0, 0.5); /* 0px is for x-axis(positive x-axis), 3px is for y-axis(negative x-axis), 15px is for blur radius and the fourth length argument is for the spread radius. */
+  background-color: transparent;
+}
+input {
+  border: none; /*Without this input has its own default border width */
+  background: transparent;
+  color: white; /* ........ we can also write this in pseudo class*/
+  height: 50px;
+  width: 346px;
+  text-align: right;
+  margin-left: 14px;
+  padding: 20px;
+  font-size: 40px;
+  cursor: pointer;
+}
+input::placeholder {
+  color: white;
+}
+button {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin: 15px;
+  border-radius: 30px; /* or 50%*/
+  background: transparent;
+  border: none;
+  box-shadow: 1px 1px 3px black, -1px -1px 3px black;
+  color: #3a4452;
+  font-size: 21px;
+}
+button:hover {
+  color: white;
+  transform: scale(1.1);
+}
+.equal {
+  background-color: orange;
+}
